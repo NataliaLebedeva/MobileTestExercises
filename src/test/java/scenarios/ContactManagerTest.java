@@ -5,7 +5,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import scenarios.pageobject.ContactManagerApp;
-import scenarios.pageobject.entities.Contact;
 
 import java.net.MalformedURLException;
 
@@ -15,15 +14,16 @@ public class ContactManagerTest extends DriverSetup {
 
     @BeforeClass
     public void setUp() throws MalformedURLException {
-        prepareNative();
+        prepareAndroidNative();
+//        prepareAndroidWeb();
         ContactManagerApp.init(driver);
     }
 
-    @Test
-    public void addContactTest() {
-        ContactManagerApp.homePage.addContactButton.click();
-        ContactManagerApp.addContactPage.addContact(Contact.CONTACT_NATA);
-    }
+//    @Test
+//    public void addContactTest() {
+//        ContactManagerApp.homePage.addContactButton.click();
+//        ContactManagerApp.addContactPage.addContact(Contact.CONTACT_NATA);
+//    }
 
     @Test
     public void tapButtonTest() {
@@ -32,6 +32,13 @@ public class ContactManagerTest extends DriverSetup {
         driver.findElement(By.id("contactSaveButton")).click();
         System.out.println("addContactButton is taped");
     }
+
+//    @Test(description = "Open website")
+//    public void webTest() throws InterruptedException {
+//        driver.get("http://iana.org");
+//        Thread.sleep(5000);
+//        System.out.println("Site opening done");
+//    }
 
     @AfterClass
     public void tearDown() {
