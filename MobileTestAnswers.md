@@ -10,8 +10,9 @@ also changed to the device ID (serial number).
 
 3. The first run of test takes more time, then the following.
 
-4.  *a) The existing code is not a test as it is, there is no "Assert" - methods.
-    *b) Too many "hard code"-values.
-    *c) Thread.sleep in "webTest".
-    *d) Absolute path to app.
-    *e) The structure of classes is not optimal.
+4.  
+   * a) The existing code is not a test as it is, there is no "Assert" - methods.
+   * b) Too many "hard code"-values.
+   * c) Thread.sleep in "webTest".
+   * d) Absolute path to app.
+   * e) The structure of classes is not optimal.
