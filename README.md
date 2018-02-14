@@ -10,21 +10,16 @@ also changed to the device ID (serial number).
 
 3. The first run of test takes more time, then the following.
 
-4.  a) The existing code is not a test as it is, there is no "Assert" - methods.
-    b) Too many "hard code"-values.
-    c) Thread.sleep in "webTest".
-    d) Absolute path to app.
-    e) The structure of classes is not optimal
-
-## Home work 3
-1.
-
-2.
-
-3.
-
 4.
+   * The existing code is not a test as it is, there is no "Assert" - methods.
+   * Too many "hard code"-values.
+   * Thread.sleep in "webTest".
+   * Absolute path to app.
+   * The structure of classes is not optimal.
+   
+## Home work 3
 
-5.
-
-6.
+* For executing test for native application:
+   ##### mvn clean test -P app
+* For executing test for web application:
+   ##### mvn clean test -P web,prod
