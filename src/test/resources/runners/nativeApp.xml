@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Native Application tests" verbose="1">
+    <test name="Native Application contact manager">
+        <groups>
+            <run>
+                <include name="app"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="scenarios.hw3.NativeAppWebTest"/>
+        </classes>
+    </test>
+
+</suite>

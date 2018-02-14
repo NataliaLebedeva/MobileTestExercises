@@ -15,3 +15,16 @@ also changed to the device ID (serial number).
     c) Thread.sleep in "webTest".
     d) Absolute path to app.
     e) The structure of classes is not optimal
+
+## Home work 3
+1.
+
+2.
+
+3.
+
+4.
+
+5.
+
+6.

@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Web Application tests" verbose="1">
+    <test name="Simple web test">
+        <groups>
+            <run>
+                <include name="web"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="scenarios.hw3.NativeAppWebTest"/>
+        </classes>
+    </test>
+
+</suite>

@@ -1,8 +1,8 @@
-package scenarios.pageobject;
+package scenarios.pageobject.app;
 
 import org.openqa.selenium.WebDriver;
-import scenarios.pageobject.pages.AddContactPage;
-import scenarios.pageobject.pages.HomePage;
+import scenarios.pageobject.app.pages.AddContactPage;
+import scenarios.pageobject.app.pages.HomePage;
 
 public class ContactManagerApp {
 

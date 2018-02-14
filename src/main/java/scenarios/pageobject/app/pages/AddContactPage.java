@@ -1,9 +1,10 @@
-package scenarios.pageobject.pages;
+package scenarios.pageobject.app.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import scenarios.pageobject.entities.Contact;
+import scenarios.pageobject.app.entities.Contact;
+import scenarios.pageobject.common.BasePage;
 
 public class AddContactPage extends BasePage {
     @FindBy(id = "contactNameEditText")
