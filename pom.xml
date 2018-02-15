@@ -85,6 +85,29 @@
                 <domain>https://www.iana.org/</domain>
             </properties>
         </profile>
+        <profile>
+            <id>sony</id>
+            <properties>
+                <deviceID>WUJ01KCTA5</deviceID>
+                <platform>Android</platform>
+                <browser>Chrome</browser>
+            </properties>
+        </profile>
+        <profile>
+            <id>emu</id>
+            <properties>
+                <deviceID>emulator-5554</deviceID>
+                <platform>Android</platform>
+                <browser>Chrome</browser>
+            </properties>
+        </profile>
+        <profile>
+            <id>iOS</id>
+            <properties>
+                <platform>iOS</platform>
+                <browser>Safari</browser>
+            </properties>
+        </profile>
     </profiles>
 
     <dependencies>

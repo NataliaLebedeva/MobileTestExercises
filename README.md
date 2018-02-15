@@ -19,7 +19,22 @@ also changed to the device ID (serial number).
    
 ## Home work 3
 
-* For executing test for native application:
-   ##### mvn clean test -P app
-* For executing test for web application:
-   ##### mvn clean test -P web,prod
+* For executing test for native application on emulator:
+   ##### mvn clean test -P app,emu
+* For executing test for web application on emulator:
+   ##### mvn clean test -P web,prod,emu
+* For executing test for native application on device:
+   ##### mvn clean test -P app,sony
+* For executing test for web application on device:
+   ##### mvn clean test -P web,prod,sony
+   
+1. Instance of driver is now unique for application test. For testing web the new instance of driver will be created.
+This solution won't work in parallel. To solve it, this code can be improved by using special library, or by using
+`ThreadLocal<WebDriver>`.
+
+2. I used library to pass property from Maven `<profile>` to java-code.
+The main purpose of this decision is to avoid issues in my current realisation.
+The less code - the less chance to get a mistake.
+
+5. From my point of view, to check URL or title or one unique element of HomePage is quite enough to assert,
+that the page is opened.  

@@ -3,6 +3,7 @@ package scenarios.setup.driver;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import scenarios.setup.TestProperties;
 import scenarios.setup.Utils;
 
 import java.util.HashMap;
@@ -14,10 +15,9 @@ public class Drivers {
         put("web", () -> {
             WebDriver driver;
             DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability("platformName", "Android");
-//        capabilities.setCapability("deviceName", "emulator-5554");
-            capabilities.setCapability("deviceName", "WUJ01KCTA5");
-            capabilities.setCapability("browserName", "Chrome");
+            capabilities.setCapability("platformName", TestProperties.get().platform());
+            capabilities.setCapability("deviceName", TestProperties.get().deviceID());
+            capabilities.setCapability("browserName", TestProperties.get().browser());
             driver = new AndroidDriver(Utils.createUrl(), capabilities);
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
             return driver;
@@ -25,11 +25,9 @@ public class Drivers {
         put("app", () -> {
             WebDriver driver;
             DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability("platformName", "Android");
-//        capabilities.setCapability("deviceName", "emulator-5554");
-            capabilities.setCapability("deviceName", "WUJ01KCTA5");
-            String path = "C:/Users/Nata/Documents/Projects/epam_training/mobile_testing/MobileTestExercises/src/test/resources/ContactManager.apk";
-            capabilities.setCapability("app", path);
+            capabilities.setCapability("platformName", TestProperties.get().platform());
+            capabilities.setCapability("deviceName", TestProperties.get().deviceID());
+            capabilities.setCapability("app", TestProperties.get().appPath());
             driver = new AndroidDriver(Utils.createUrl(), capabilities);
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
             return driver;

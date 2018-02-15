@@ -11,4 +11,12 @@ public interface TestConfig extends Config {
     String domain();
 
     String deviceUrl();
+
+    String appPath();
+
+    String deviceID();
+
+    String platform();
+
+    String browser();
 }
