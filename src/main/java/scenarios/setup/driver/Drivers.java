@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
-public class Drivers {
+class Drivers {
     private static HashMap<String, Supplier<WebDriver>> AVAILABLE_DRIVERS = new HashMap<String, Supplier<WebDriver>>() {{
         put("web", () -> {
             WebDriver driver;
@@ -34,7 +34,7 @@ public class Drivers {
         });
     }};
 
-    public static WebDriver get(String type) {
-        return AVAILABLE_DRIVERS.get(type).get();
+    static Supplier<WebDriver> get(String type) {
+        return AVAILABLE_DRIVERS.get(type);
     }
 }

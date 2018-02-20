@@ -26,6 +26,6 @@ public class BaseTest {
 
     @AfterSuite(alwaysRun = true)
     public void afterSuite() {
-        DriverFactory.quite();
+        DriverFactory.quit();
     }
 }
